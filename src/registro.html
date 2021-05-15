@@ -13,40 +13,40 @@
     <link rel="stylesheet" href="css/estilo.css">
   </head>
   <body>
-      <form class="formulario">
-          <h1>Registro de usuarios </h1>
-          <div class="contenedor">
-            <!--Contenedores para introducir los datos de los usuarios-->
-            <div class="input-contenedor">
-                <i class="fas fa-user icon"></i>
-                <input type="text" placeholder="Nombre(s)">
-            </div>
-
-            <div class="input-contenedor">
-                <i class="fas fa-user icon"></i>
-                <input type="text" placeholder="Apellidos">
-            </div>
-
-            <div class="input-contenedor">
-                <i class="far fa-envelope icon"></i>
-                <input type="text" placeholder="Correo Eléctronico">
-            </div>
-
-            <div class="input-contenedor">
-                <i class="fas fa-lock icon"></i>
-                <input type="password" placeholder="Contraseña">
-            </div>
-
-            <div class="input-contenedor">
-                <i class="fas fa-phone-alt icon"></i>
-                <input type="text" placeholder="Número de telefono">
-            </div>
-
-            <!--Palo esta haciendo el login, cambiar el link del html-->
-            <input type= "submit" value="Registrate" class="button">
-             <p>¿Ya tienes cuenta? <a class="link" href="Login.html">Iniciar sesión</a></p>
-
+      <form class="formulario" action="php/registro.php" method="POST">
+        <h1>Registro de usuarios </h1>
+        <div class="contenedor">
+          <!--Contenedores para introducir los datos de los usuarios-->
+          <div class="input-contenedor">
+              <i class="fas fa-user icon"></i>
+              <input type="text" placeholder="Nombre(s)">
           </div>
+
+          <div class="input-contenedor">
+              <i class="fas fa-user icon"></i>
+              <input type="text" placeholder="Apellidos">
+          </div>
+
+          <div class="input-contenedor">
+              <i class="far fa-envelope icon"></i>
+              <input type="text" placeholder="Correo Eléctronico">
+          </div>
+
+          <div class="input-contenedor">
+              <i class="fas fa-lock icon"></i>
+              <input type="password" placeholder="Contraseña">
+          </div>
+
+          <div class="input-contenedor">
+              <i class="fas fa-phone-alt icon"></i>
+              <input type="text" placeholder="Número de telefono">
+          </div>
+
+          <!--Palo esta haciendo el login, cambiar el link del html-->
+          <input type= "submit" value="Registrate" class="button" name="registrarBtn">
+           <p>¿Ya tienes cuenta? <a class="link" href="Login.html">Iniciar sesión</a></p>
+
+        </div>
       </form>
   
     
