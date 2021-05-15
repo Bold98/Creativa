@@ -6,15 +6,9 @@
         echo "todo correcto";
     }
 
-    
-
-    /*$nombres = $_POST("nombre");
-    $apellidos = $_POST("apellido");
-    $correo = $_POST("correo");
-    $contraseña = $_POST("contraseña");
-    $telefono= $_POST('telefono'); */
-
+    //if si se presiona el botón "registrarBtn"
     if (isset($_POST['registrarBtn'])){
+        //if que comprueba que los campos no estén vacíos para proseguir
         if(strlen($_POST['nombre']) >= 1 && strlen($_POST['apellido']) >= 1 && strlen($_POST['correo']) >= 1 && strlen($_POST['contrasena']) >= 1 && strlen($_POST['telefono']) >= 1){
             $nombres = trim($_POST["nombre"]);
             $apellidos = trim($_POST["apellido"]);
@@ -50,27 +44,5 @@
            <h3>Completa los campos</h3>
            <?php
         }
-        //Aqui se pone un INSERT en la BD
-        /*$sqlInsertar = "INSERT INTO clientes(
-                                        nombre_cliente,
-                                        apellido_cliente,
-                                        correo,
-                                        contraseña,
-                                        no_telefono
-                                    )
-                                    VALUES(
-                                        '$nombres',
-                                        '$apellidos',
-                                        '$correo',
-                                        '$contraseña',
-                                        '$telefono'
-                                    )";*/
-
-        //Conn es la variable que se utiliza para conectar la base de datos
-        /*if (mysqli_query($establecer_conexion,$sqlInsertar)){
-            echo "funcionó";
-        }else{
-            //Aqui va el mensaje si pasa un error al conectar con la BD
-        }*/
     }
 ?>
