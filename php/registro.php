@@ -35,13 +35,19 @@
             $resultado = mysqli_query($conexion_bd,$sqlInsertar);
             if($resultado){
                 ?>
-                <h3>todo fino</h3>
+                <script>
+                    alert("El registro se realizo con éxito");
+                    window.location = "../Vistas/v_registro.php";
+                </script>;
                 <?php
             }
         }
         else{
             ?>
-           <h3>Completa los campos</h3>
+           <script>
+                alert("Falto llenar alguno de los campos, intente de nuevo");
+                window.location = "../Vistas/v_registro.php";
+            </script>;
            <?php
         }
     }
