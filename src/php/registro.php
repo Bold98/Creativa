@@ -6,7 +6,6 @@
     $apellidos = $_POST("apellido");
     $correo = $_POST("correo");
     $telefono= $_POST("telefono"); 
-
     if (isset($_POST["registrarBtn"])){
 
         //Aqui se pone un INSERT en la BD
