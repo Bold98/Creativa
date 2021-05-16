@@ -17,20 +17,23 @@ h1 {
 input[type="text"],
 input[type="password"]{
     font-size: 20px;
-    width: 82%px;
+    width: 88%;
     padding: 10px;
     border: none;
 }
 
 .input-contenedor{
     margin-bottom: 15px;
+    
     border: 1px solid #aaa
 }
 
 .icon{
+    font-size: large;
     min-width: 50px;
     text-align: center;
     color: #999;
+    margin-left: 10px;
 }
 
 .button{
