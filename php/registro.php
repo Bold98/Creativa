@@ -2,13 +2,11 @@
     //Es para que se conecte a la base de datos
     include("../Modelo/Conexion_BD.php");
 
-    if($conexion_bd){
-        echo "todo correcto";
-    }
 
-    //if si se presiona el botón "registrarBtn"
+    //if el botón registrarBtn fue presionado
     if (isset($_POST['registrarBtn'])){
-        //if que comprueba que los campos no estén vacíos para proseguir
+       
+        //Comprobar que llenara los campos
         if(strlen($_POST['nombre']) >= 1 && strlen($_POST['apellido']) >= 1 && strlen($_POST['correo']) >= 1 && strlen($_POST['contrasena']) >= 1 && strlen($_POST['telefono']) >= 1){
             $nombres = trim($_POST["nombre"]);
             $apellidos = trim($_POST["apellido"]);
@@ -16,32 +14,55 @@
             $contraseña = trim($_POST["contrasena"]);
             $telefono= trim($_POST["telefono"]);
 
-            //Aqui se pone un INSERT en la BD
-            $sqlInsertar = "INSERT INTO cliente(
-                nombre_cliente,
-                apellido_cliente,
-                correo,
-                contraseña,
-                no_telefono
-            )
-            VALUES(
-                '$nombres',
-                '$apellidos',
-                '$correo',
-                '$contraseña',
-                '$telefono'
-            )";
-
-            $resultado = mysqli_query($conexion_bd,$sqlInsertar);
-            if($resultado){
+            //Comprobar que el correo no esté ya registrado
+            $sqlComprobar = "SELECT correo FROM cliente where correo='$correo'";
+            $resultado = mysqli_query($conexion_bd,$sqlComprobar);
+            if(mysqli_num_rows($resultado) > 0){
                 ?>
-                <h3>todo fino</h3>
+                <script>
+                    alert("Este correo ya está registrado. Inténtalo de nuevo.");
+                    window.location = "../Vistas/v_registro.php";
+                </script>
                 <?php
             }
+            else{
+                //Aqui se pone un INSERT en la BD
+                $sqlInsertar = "INSERT INTO cliente(
+                    nombre_cliente,
+                    apellido_cliente,
+                    correo,
+                    contraseña,
+                    no_telefono
+                )
+                VALUES(
+                    '$nombres',
+                    '$apellidos',
+                    '$correo',
+                    '$contraseña',
+                    '$telefono'
+                )";
+                
+                $resultado = mysqli_query($conexion_bd,$sqlInsertar);
+
+                //Datos subidos a base de datos
+                if($resultado){
+                    ?>
+                    <script>
+                        alert("El registro se realizó con éxito.");
+                        window.location = "../index.html";
+                    </script>;
+                    <?php
+                }
+            }
+            
         }
+        //Campos vacios
         else{
             ?>
-           <h3>Completa los campos</h3>
+           <script>
+                alert("No llenó la información necesaria. Compruebe los campos.");
+                window.location = "../Vistas/v_registro.php";
+            </script>;
            <?php
         }
     }
