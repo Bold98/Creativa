@@ -46,7 +46,7 @@
           <input type= "submit" value="Registrate" class="button" name="registrarBtn">
            <p>¿Ya tienes cuenta? <a class="link" href="Login.html">Iniciar sesión</a></p>
           <?php
-          include("../php/registro.php");
+          include("../php/C_registro.php");
           ?>
         </div>
       </form>
