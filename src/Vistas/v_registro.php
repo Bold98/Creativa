@@ -18,28 +18,28 @@
         <div class="contenedor">
           <!--Contenedores para introducir los datos de los usuarios-->
           <div class="input-contenedor">
-              <i class="fas fa-user icon"></i>
-              <input type="text" name="nombre" placeholder="Nombre(s)">
+            <i class="bi bi-person-circle icon"></i>
+            <input type="text" name="nombre" placeholder="Nombre(s)">
           </div>
 
           <div class="input-contenedor">
-              <i class="fas fa-user icon"></i>
-              <input type="text" name="apellido" placeholder="Apellidos">
+            <i class="bi bi-person-circle icon"></i>
+            <input type="text" name="apellido" placeholder="Apellidos">
           </div>
 
           <div class="input-contenedor">
-              <i class="far fa-envelope icon"></i>
-              <input type="text" name="correo" placeholder="Correo Eléctronico">
+            <i class="bi bi-envelope-fill icon"></i>
+            <input type="text" name="correo" placeholder="Correo Eléctronico">
           </div>
 
           <div class="input-contenedor">
-              <i class="fas fa-lock icon"></i>
-              <input type="password" name="contrasena" placeholder="Contraseña">
+            <i class="bi bi-lock-fill icon "></i>
+            <input type="password" name="contrasena" placeholder="Contraseña">
           </div>
 
           <div class="input-contenedor">
-              <i class="fas fa-phone-alt icon"></i>
-              <input type="text" name="telefono" placeholder="Número de telefono">
+            <i class="bi bi-telephone-fill icon "></i>
+            <input type="text" name="telefono" placeholder="Número de telefono">
           </div>
 
           <!--Palo esta haciendo el login, cambiar el link del html-->

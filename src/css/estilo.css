@@ -28,9 +28,11 @@ input[type="password"]{
 }
 
 .icon{
+    font-size: large;
     min-width: 50px;
     text-align: center;
     color: #999;
+    margin-left: 10px;
 }
 
 .button{
