@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/4ccc09e7b6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <form class="formulario" action="php/registro.php" method="POST">
+    <form class="formulario" action="php/login.php method="POST">
         <h1>Inicio de sesión</h1>
         <div class="contenedor">
             <div class="input-contenedor">
