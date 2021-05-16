@@ -24,7 +24,7 @@
             </div>
 
             <input type= "submit" value="Iniciar Sesión" class="button" name="ingresarBtn">
-            <p>¿No tienes cuenta? <a class="link" href="registro.html">Registrarte</a></p>
+            <p>¿No tienes cuenta? <a class="link" href="registro.php">Registrarte</a></p>
         </div>
     </form>
 </body>
