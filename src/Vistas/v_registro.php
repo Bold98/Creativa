@@ -44,7 +44,7 @@
 
           <!--Palo esta haciendo el login, cambiar el link del html-->
           <input type= "submit" value="Registrate" class="button" name="registrarBtn">
-           <p>¿Ya tienes cuenta? <a class="link" href="Login.html">Iniciar sesión</a></p>
+           <p>¿Ya tienes cuenta? <a class="link" href="v_login.php">Iniciar sesión</a></p>
           <?php
           include("../Controlador/C_registro.php");
           ?>
