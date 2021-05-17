@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/estilo.css">
   </head>
   <body>
-      <form class="formulario" action="../php/registro.php" method="POST">
+      <form class="formulario" action="../Controlador/C_registro.php" method="POST">
         <h1>Registro de usuarios </h1>
         <div class="contenedor">
           <!--Contenedores para introducir los datos de los usuarios-->
@@ -46,7 +46,7 @@
           <input type= "submit" value="Registrate" class="button" name="registrarBtn">
            <p>¿Ya tienes cuenta? <a class="link" href="Login.html">Iniciar sesión</a></p>
           <?php
-          include("../php/C_registro.php");
+          include("../Controlador/C_registro.php");
           ?>
         </div>
       </form>
