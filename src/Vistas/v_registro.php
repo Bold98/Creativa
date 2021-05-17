@@ -13,40 +13,40 @@
     <link rel="stylesheet" href="../css/estilo.css">
   </head>
   <body>
-      <form class="formulario" action="../php/registro.php" method="POST">
+      <form class="formulario" action="../Controlador/C_registro.php" method="POST">
         <h1>Registro de usuarios </h1>
         <div class="contenedor">
           <!--Contenedores para introducir los datos de los usuarios-->
           <div class="input-contenedor">
-              <i class="fas fa-user icon"></i>
-              <input type="text" name="nombre" placeholder="Nombre(s)">
+            <i class="bi bi-person-circle icon"></i>
+            <input type="text" name="nombre" placeholder="Nombre(s)">
           </div>
 
           <div class="input-contenedor">
-              <i class="fas fa-user icon"></i>
-              <input type="text" name="apellido" placeholder="Apellidos">
+            <i class="bi bi-person-circle icon"></i>
+            <input type="text" name="apellido" placeholder="Apellidos">
           </div>
 
           <div class="input-contenedor">
-              <i class="far fa-envelope icon"></i>
-              <input type="text" name="correo" placeholder="Correo Eléctronico">
+            <i class="bi bi-envelope-fill icon"></i>
+            <input type="text" name="correo" placeholder="Correo Eléctronico">
           </div>
 
           <div class="input-contenedor">
-              <i class="fas fa-lock icon"></i>
-              <input type="password" name="contrasena" placeholder="Contraseña">
+            <i class="bi bi-lock-fill icon "></i>
+            <input type="password" name="contrasena" placeholder="Contraseña">
           </div>
 
           <div class="input-contenedor">
-              <i class="fas fa-phone-alt icon"></i>
-              <input type="text" name="telefono" placeholder="Número de telefono">
+            <i class="bi bi-telephone-fill icon "></i>
+            <input type="text" name="telefono" placeholder="Número de telefono">
           </div>
 
           <!--Palo esta haciendo el login, cambiar el link del html-->
           <input type= "submit" value="Registrate" class="button" name="registrarBtn">
            <p>¿Ya tienes cuenta? <a class="link" href="Login.html">Iniciar sesión</a></p>
           <?php
-          include("../php/registro.php");
+          include("../Controlador/C_registro.php");
           ?>
         </div>
       </form>
