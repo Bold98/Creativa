@@ -44,7 +44,7 @@
 
           <!--Palo esta haciendo el login, cambiar el link del html-->
           <input type= "submit" value="Registrate" class="button" name="registrarBtn">
-           <p>¿Ya tienes cuenta? <a class="link" href="Login.html">Iniciar sesión</a></p>
+           <p>¿Ya tienes cuenta? <a class="link" href="v_login.php">Iniciar sesión</a></p>
           <?php
           include("../Controlador/C_registro.php");
           ?>
@@ -53,6 +53,6 @@
   
     
     
-    <script src="js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="../js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   </body>
 </html>
