@@ -16,3 +16,7 @@ body {
 .imgCarrusel{
     width: 25%;
 }
+
+.nav-link{
+    padding: 0;
+}
