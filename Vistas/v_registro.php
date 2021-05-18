@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/estilo.css">
   </head>
   <body>
-      <form class="formulario" action="../Controlador/C_registro.php" method="POST">
+      <form class="formulario" method="POST">
         <h1>Registro de usuarios </h1>
         <div class="contenedor">
           <!--Contenedores para introducir los datos de los usuarios-->
