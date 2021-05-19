@@ -6,7 +6,7 @@
 
 }
 .formulario {
-    margin-top: 150px;
+    margin-top: 100px;
     padding: 3px;
     margin-bottom: 100px;
 }
@@ -21,12 +21,16 @@ input[type="password"]{
     width: 92.5%;
     padding: 10px;
     border: none;
+
 }
 
 .input-contenedor{
     margin-bottom: 15px;
-    border: 1px solid #aaa
+    border: 1px solid #aaa;
+    background-color: white;
+    
 }
+
 
 .icon{
     font-size: large;
@@ -34,6 +38,7 @@ input[type="password"]{
     text-align: center;
     color: #999;
     margin-left: 10px;
+ 
 }
 
 .button{
@@ -64,7 +69,7 @@ p{
     .formulario{
         margin:auto;
         width: 500px;
-        margin-top: 150px;
+        margin-top: 100px;
         border-radius: 2%;
     }
 } 
