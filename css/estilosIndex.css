@@ -20,3 +20,11 @@ body {
 .nav-link{
     padding: 0;
 }
+
+/*.navbar-nav2 {
+    display: flex;
+    flex-direction: column; 
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}*/

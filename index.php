@@ -34,7 +34,13 @@
       <!--User navbar-->
       <nav class="navbar navbar-dark navbar-expand-lg bg-dark" >
         <div class="container-fluid">
-          <div class="collapse navbar-collapse" style="justify-content: flex-end;" id="">
+        <a class="navbar-brand" href="#">
+              <!--<img src="img/logo-icon.png" alt="" width="30"  class="d-inline-block align-text-top">-->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" style="justify-content: flex-end;" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Nombre de usuario</a>
@@ -73,10 +79,10 @@
               <img src="img/logo-icon.png" alt="" width="30"  class="d-inline-block align-text-top">
               Creativa
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+            <div class="collapse navbar-collapse"  id="navbarSupportedContent2">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">Quienes somos</a>

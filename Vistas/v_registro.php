@@ -1,25 +1,12 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <script src="https://kit.fontawesome.com/4ccc09e7b6.js" crossorigin="anonymous"></script>
-    <title>Registro</title>
-    <link rel="stylesheet" href="../css/estilo.css">
-  </head>
-  <body>
+<?php include_once 'header.php' ?>
+    <div class="row">
       <form class="formulario" method="POST">
         <h1>Registro de usuarios </h1>
-        <div class="contenedor">
+        <div class="container">
           <!--Contenedores para introducir los datos de los usuarios-->
           <div class="input-contenedor">
             <i class="bi bi-person-circle icon"></i>
-            <input type="text" name="nombre" placeholder="Nombre(s)">
+            <input class="" type="text" name="nombre" placeholder="Nombre(s)">
           </div>
 
           <div class="input-contenedor">
@@ -50,9 +37,10 @@
           ?>
         </div>
       </form>
+    </div>
+      
   
     
     
     <script src="../js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-  </body>
-</html>
+    <?php include_once 'footer.php' ?>
