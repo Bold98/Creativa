@@ -8,6 +8,7 @@
 .formulario {
     margin-top: 150px;
     padding: 3px;
+    margin-bottom: 100px;
 }
 h1 {
     text-align: center;
@@ -67,3 +68,34 @@ p{
         border-radius: 2%;
     }
 } 
+/*Estilos del index*/
+body {
+    min-height: 100vh;
+}
+
+.bg-cover {
+    background-size: cover !important;
+}
+
+.headBanner {
+    -webkit-filter: drop-shadow(1px 1px 0 white)
+                    drop-shadow(-1px -1px 0 white);
+    filter: drop-shadow(1px 1px 0 white) 
+            drop-shadow(-1px -1px 0 white);
+  }
+
+.imgCarrusel{
+    width: 10%;
+}
+
+.nav-link{
+    padding: 0;
+}
+
+/*.navbar-nav2 {
+    display: flex;
+    ///flex-direction: column; 
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}*/
