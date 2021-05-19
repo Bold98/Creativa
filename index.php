@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <title>Hello, world!</title>
+    <title>Creativa</title>
     <link rel="stylesheet" href="css/estilosIndex.css">
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
