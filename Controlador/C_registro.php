@@ -14,56 +14,72 @@
             $contraseña = trim($_POST["contrasena"]);
             $telefono= trim($_POST["telefono"]);
 
-            //Comprobar que el correo no esté ya registrado
-            $sqlComprobar = "SELECT correo FROM cliente where correo='$correo'";
-            $resultado = mysqli_query($conexion_bd,$sqlComprobar);
-            if(mysqli_num_rows($resultado) > 0){
-                ?>
-                <script>
-                    alert("Este correo ya está registrado. Inténtalo de nuevo.");
-                    window.location = "../Vistas/v_registro.php";
-                </script>
-                <?php
-            }
-            else{
-                //Aqui se pone un INSERT en la BD
-                $sqlInsertar = "INSERT INTO cliente(
-                    nombre_cliente,
-                    apellido_cliente,
-                    correo,
-                    contraseña,
-                    no_telefono
-                )
-                VALUES(
-                    '$nombres',
-                    '$apellidos',
-                    '$correo',
-                    '$contraseña',
-                    '$telefono'
-                )";
-                
-                $resultado = mysqli_query($conexion_bd,$sqlInsertar);
-
-                //Datos subidos a base de datos
-                if($resultado){
+            //Comprobar que el correo tenga el formato indicado
+            if(preg_match('/^([a-zA-Z]|[0-9]|-|_|.)+@([a-zA-Z])+.([a-zA-Z]+).*([a-zA-Z])+$/', $correo)){
+                //Comprobar que el correo no esté ya registrado
+                $sqlComprobar = "SELECT correo FROM cliente where correo='$correo'";
+                $resultado = mysqli_query($conexion_bd,$sqlComprobar);
+                if(mysqli_num_rows($resultado) > 0){
                     ?>
-                    <script>
-                        alert("El registro se realizó con éxito.");
-                        window.location = "../index.html";
-                    </script>;
+                    <div id = "div_error" class="alert alert-danger" role="alert">
+                        Este correo ya está registrado. Inténtalo de nuevo.
+                    </div>
                     <?php
                 }
+                else{
+                    //Aqui se pone un INSERT en la BD
+                    $sqlInsertar = "INSERT INTO cliente(
+                        nombre_cliente,
+                        apellido_cliente,
+                        correo,
+                        contraseña,
+                        no_telefono
+                    )
+                    VALUES(
+                        '$nombres',
+                        '$apellidos',
+                        '$correo',
+                        '$contraseña',
+                        '$telefono'
+                    )";
+                    
+                    $resultado = mysqli_query($conexion_bd,$sqlInsertar);
+
+                    //Datos subidos a base de datos
+                    if($resultado){
+                        ?>
+                        <script>
+                            alert("El registro se realizó con éxito.");
+                            window.location = "../index.html";
+                        </script>;
+                        <?php
+                    }
+                }
             }
-            
+            else{
+                ?>
+                <div id = "div_error" class="alert alert-danger" role="alert">
+                    Formato de correo incorrecto.
+                </div>
+                <?php
+            }
         }
         //Campos vacios
         else{
             ?>
-           <script>
-                alert("No llenó la información necesaria. Compruebe los campos.");
-                window.location = "../Vistas/v_registro.php";
-            </script>;
+            <div id = "div_error" class="alert alert-danger" role="alert">
+                <h4 class="alert-heading">No se llenó la información necesaria.</h4>
+                <p>Uno o más campos fueron enviados vacíos y no fue posible completar el registro.</p>
+                <hr>
+                <p class="mb-0">Complete el formulario e intente de nuevo.</p>
+            </div>
            <?php
         }
     }
 ?>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#div_error").fadeOut(10000);
+    });
+</script>

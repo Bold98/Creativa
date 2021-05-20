@@ -34,18 +34,33 @@
       <!--User navbar-->
       <nav class="navbar navbar-dark navbar-expand-lg bg-dark" >
         <div class="container-fluid">
-          <div class="collapse navbar-collapse" style="justify-content: flex-end;" id="">
+        <a class="navbar-brand" href="#">
+              <!--<img src="img/logo-icon.png" alt="" width="30"  class="d-inline-block align-text-top">-->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" style="justify-content: flex-end;" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Acciones:</a>
+                <a class="nav-link active" aria-current="page" href="#">Nombre de usuario</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Acceder</a>
+                <a class="nav-link active" aria-current="page" >Acciones:</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Vistas/v_login.php">Acceder</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Vistas/v_registro.php">Registro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Panel de control</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Salir</a>
               </li>
               
-              <li class="nav-item">
-                <a class="nav-link" href="#">Registro</a>
-              </li>
             </ul>
           </div>
         </div>
@@ -64,17 +79,17 @@
               <img src="img/logo-icon.png" alt="" width="30"  class="d-inline-block align-text-top">
               Creativa
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+            <div class="collapse navbar-collapse"  id="navbarSupportedContent2">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#">Quienes somos</a>
                 </li>
                 
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Productos
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -103,13 +118,13 @@
     <div id="carouselExampleControls" class="carousel slide container" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/carrusel/cp 2@2x-8.png" class="d-block w-25" alt="...">
+          <img src="img/carrusel/img1.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="img/carrusel/Recurso 10@2x-8.png" class="d-block w-25" alt="...">
+          <img src="img/carrusel/img2.png" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="img/carrusel/tazas@2x-8.png" class="d-block w-25" alt="...">
+          <img src="img/carrusel/img3.png" class="d-block w-100" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
