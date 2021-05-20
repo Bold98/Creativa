@@ -1,3 +1,7 @@
+<?php 
+  $color_code = array('#f0c29c','#e89bae','#9ce2e1');
+  $random_color = $color_code[array_rand($color_code)];
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -29,7 +33,7 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
   </head>
-  <body style="background-color: #f0c29c;">
+  <body style="background-color: <?php echo $random_color;?>">
     <header>
       <!--User navbar-->
       <nav class="navbar navbar-dark navbar-expand-lg bg-dark" >
@@ -115,16 +119,16 @@
       </div>
     </header>
 
-    <div id="carouselExampleControls" class="carousel slide container" data-bs-ride="carousel">
+    <div id="carouselExampleControls" class="carousel slide container shadow" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/carrusel/img1.png" class="d-block w-100" alt="...">
+          <img src="img/carrusel/img1.png" class="d-block w-100 img-fluid" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="img/carrusel/img2.png" class="d-block w-100" alt="...">
+          <img src="img/carrusel/img2.png" class="d-block w-100 img-fluid" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="img/carrusel/img3.png" class="d-block w-100" alt="...">
+          <img src="img/carrusel/img3.png" class="d-block w-100 img-fluid" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

@@ -11,7 +11,7 @@
                     <div class="large-5 column">
                         <div class="xzoom-container"> 
                             <img class="xzoom" id="xzoom-default" src="../img/productos/taza.png" xoriginal="../img/productos/tazaOriginal.png" />
-                            <div class="xzoom-thumbs"> 
+                            <div class="xzoom-thumbs" style="text-align: center;"> 
                                 <a href="../img/productos/tazaOriginal.png"> 
                                     <img class="xzoom-gallery" width="80" src="../img/productos/tazaMini.png" xpreview="../img/productos/taza.png">
                                 </a> 
@@ -23,7 +23,7 @@
                                 </a> 
                                 <a href="https://i.imgur.com/Q7xvBFf.jpg">
                                     <img class="xzoom-gallery" width="80" src="https://i.imgur.com/3SuUpUH.jpg">
-                                </a> 
+                                </a>
                             </div>
                         </div>
                     </div>

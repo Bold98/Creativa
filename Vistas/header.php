@@ -1,3 +1,7 @@
+<?php 
+  $color_code = array('#f0c29c','#e89bae','#9ce2e1');
+  $random_color = $color_code[array_rand($color_code)];
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -32,7 +36,8 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
   </head>
-  <body style="background-color: #f0c29c;">
+
+  <body style="background-color: <?php echo $random_color;?>">
     <header>
       <!--User navbar-->
       <nav class="navbar navbar-dark navbar-expand-lg bg-dark" >

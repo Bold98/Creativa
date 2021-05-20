@@ -1,7 +1,7 @@
 <?php
     //Es para que se conecte a la base de datos
     include("../Modelo/Conexion_BD.php");
-
+    session_start();
     //if el botón ingresarBtn fue presionado
     if(isset($_POST['ingresarBtn'])){
         //Comprobar que llenara los campos
