@@ -1,4 +1,8 @@
 <?php 
+  if(!isset($_SESSION)) 
+  { 
+      session_start(); 
+  } 
   $color_code = array('#f0c29c','#e89bae','#9ce2e1');
   $random_color = $color_code[array_rand($color_code)];
 ?>
@@ -39,40 +43,7 @@
 
   <body style="background-color: <?php echo $random_color;?>">
     <header>
-      <!--User navbar-->
-      <nav class="navbar navbar-dark navbar-expand-lg bg-dark" >
-        <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-              <!--<img src="img/logo-icon.png" alt="" width="30"  class="d-inline-block align-text-top">-->
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          <div class="collapse navbar-collapse" style="justify-content: flex-end;" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Nombre de usuario</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" >Acciones:</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="v_login.php">Acceder</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="v_registro.php">Registro</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Panel de control</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Salir</a>
-              </li>
-              
-            </ul>
-          </div>
-        </div>
-      </nav>
+    <?php include("userNavbar.php"); ?>
       <!--Banner-->
       <div style="background: url(../img/banner/1.png)" class="jumbotron bg-cover text-white ">
         <div class="container py-5 text-center">

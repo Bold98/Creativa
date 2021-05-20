@@ -1,4 +1,8 @@
 <?php 
+  if(!isset($_SESSION)) 
+  { 
+      session_start(); 
+  } 
   $color_code = array('#f0c29c','#e89bae','#9ce2e1');
   $random_color = $color_code[array_rand($color_code)];
 ?>
@@ -13,7 +17,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <title>Creativa - </title>
+    <title>Creativa - <?php echo $_SESSION['userName']?></title>
     <link rel="stylesheet" href="css/estilosIndex.css">
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
@@ -46,25 +50,44 @@
             </button>
           <div class="collapse navbar-collapse" style="justify-content: flex-end;" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
+            <?php if(isset($_SESSION['userName'])){ ?>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Nombre de usuario</a>
+                <div class = "row ml-auto">
+                  <div class="col-md-5">
+                  <a class="nav-link active" aria-current="page"><?php echo $_SESSION['userName']?></a>
+                  </div>
+                  <div class="col-md-5">
+                  <a class="nav-link active" aria-current="page"><?php echo $_SESSION['userLastName']?></a>
+                  </div>
+                </div>
               </li>
+            <?php }?>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" >Acciones:</a>
               </li>
+              <?php if(!isset($_SESSION['userName'])){ ?>
               <li class="nav-item">
                 <a class="nav-link" href="Vistas/v_login.php">Acceder</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Vistas/v_registro.php">Registro</a>
               </li>
+              <?php }?>
+              <?php 
+              if(isset($_SESSION["userName"])) 
+              { 
+                $verifyAdmin = $_SESSION["userEmail"];
+              } 
+              if(isset($_SESSION['userName']) && $verifyAdmin=="creativa.detallesp@gmail.com"){ ?>
               <li class="nav-item">
                 <a class="nav-link" href="#">Panel de control</a>
               </li>
+              <?php }?>
+              <?php if(isset($_SESSION['userName'])){ ?>
               <li class="nav-item">
-                <a class="nav-link" href="#">Salir</a>
+                <a class="nav-link" href="Controlador/C_logout.php">Salir</a>
               </li>
-              
+              <?php }?>
             </ul>
           </div>
         </div>
