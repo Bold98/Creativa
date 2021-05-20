@@ -1,7 +1,10 @@
 <?php
     //Es para que se conecte a la base de datos
     include("../Modelo/Conexion_BD.php");
-
+     if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
     //if el botón ingresarBtn fue presionado
     if(isset($_POST['ingresarBtn'])){
         //Comprobar que llenara los campos
@@ -14,22 +17,36 @@
                 //Consulta para encontrar cuenta con contraseña
                 $consulta = "SELECT * FROM cliente WHERE correo='$correo' and contraseña='$contraseña'";
                 $filas = mysqli_query($conexion_bd,$consulta);
+                $mostrar = mysqli_fetch_array($filas);
                 //if el número de filas encontradas es mayor a 0 (sí existe)
                 if(mysqli_num_rows($filas) > 0){
                     if($correo=="creativa.detallesp@gmail.com"){
+                        
+                        $_SESSION['userId'] = $mostrar['id_cliente'];
+                        $_SESSION['userName'] = $mostrar['nombre_cliente'];
+                        $_SESSION['userLastName'] =  $mostrar['apellido_cliente'];
+                        $_SESSION['userEmail'] =  $mostrar['correo'];
+                        $_SESSION['userPhone'] =  $mostrar['no_telefono'];
+                        $_SESSION['userRole'] =  $mostrar['Rol'];
                         ?>
                         <!--De momento la cuenta de administración envía a la página de registro.
                         ya que aún no contamos con interfaz. Esto fue sólo una prubea.
                         Planeo cambiar la forma en que funciona-->
                         <script>
-                            window.location = "../Vistas/v_registro.php";
+                            window.location = "../index.php";
                         </script>;
                         <?php
                     }
                     else{
+                        $_SESSION['userId'] = $mostrar['id_cliente'];
+                        $_SESSION['userName'] = $mostrar['nombre_cliente'];
+                        $_SESSION['userLastName'] =  $mostrar['apellido_cliente'];
+                        $_SESSION['userEmail'] =  $mostrar['correo'];
+                        $_SESSION['userPhone'] =  $mostrar['no_telefono'];
+                        $_SESSION['userRole'] =  $mostrar['Rol'];
                         ?>
                         <script>
-                            window.location = "../index.html";
+                            window.location = "../index.php";
                         </script>;
                         <?php
                     }

@@ -1,4 +1,4 @@
-<footer class="container"> 
+<footer class=""> 
       <footer class="text-center text-white" style="background-color: #ff8297;">
         <!-- Grid container -->
         <div class="container pt-4">
@@ -49,6 +49,6 @@
       
     
     
-    <script src="../js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    
   </body>
 </html>
