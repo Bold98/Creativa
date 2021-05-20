@@ -9,7 +9,7 @@
             </button>
           <div class="collapse navbar-collapse" style="justify-content: flex-end;" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-            <?php if(isset($_SESSION['is_login'])){ ?>
+            <?php if(isset($_SESSION['userName'])){ ?>
               <li class="nav-item">
                 <div class = "row ml-auto">
                   <div class="col-md-5">
@@ -24,7 +24,7 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" >Acciones:</a>
               </li>
-              <?php if(!isset($_SESSION['is_login'])){ ?>
+              <?php if(!isset($_SESSION['userName'])){ ?>
               <li class="nav-item">
                 <a class="nav-link" href="v_login.php">Acceder</a>
               </li>
@@ -33,16 +33,16 @@
               </li>
               <?php }?>
               <?php 
-              if(!isset($_SESSION)) 
+              if(isset($_SESSION["userName"])) 
               { 
                 $verifyAdmin = $_SESSION["userEmail"];
               } 
-              if(isset($_SESSION['is_login'])&& $verifyAdmin=="creativa.detallesp@gmail.com"){ ?>
+              if(isset($_SESSION['userName']) && $verifyAdmin=="creativa.detallesp@gmail.com"){ ?>
               <li class="nav-item">
                 <a class="nav-link" href="#">Panel de control</a>
               </li>
               <?php }?>
-              <?php if(isset($_SESSION['is_login'])){ ?>
+              <?php if(isset($_SESSION['userName'])){ ?>
               <li class="nav-item">
                 <a class="nav-link" href="../Controlador/C_logout.php">Salir</a>
               </li>
