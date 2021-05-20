@@ -8,8 +8,11 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!--<script src="../js/bootstrap.min.js"></script>-->
+    <script src="../js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <title>Hello, world!</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <title>Creativa - </title>
     <link rel="stylesheet" href="../css/estilo.css">
     <link rel="apple-touch-icon" sizes="57x57" href="../img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../img/favicon/apple-icon-60x60.png">
@@ -72,10 +75,10 @@
         </div>
       </div>
       <!--Navbar-->
-      <div class="container">
+      <div class="container-sm">
         <nav class="navbar navbar-expand-lg navbar-light bg-light mt-2 mb-2">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+          <div class="container-sm">
+            <a class="navbar-brand" href="../index.php">
               <img src="../img/logo-icon.png" alt="" width="30"  class="d-inline-block align-text-top">
               Creativa
             </a>
@@ -89,17 +92,17 @@
                 </li>
                 
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Productos
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Producto #1</a></li>
+                    <li><a class="dropdown-item" href="productos.php">Todos los productos</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="tazas.php">Producto #1</a></li>
                     <li><a class="dropdown-item" href="#">Producto #2</a></li>
                     <li><a class="dropdown-item" href="#">Producto #3</a></li>
                     <li><a class="dropdown-item" href="#">Producto #4</a></li>
                     <li><a class="dropdown-item" href="#">Producto #5</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Algo m&aacute;s</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
