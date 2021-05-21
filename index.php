@@ -1,3 +1,12 @@
+<?php 
+  if(!isset($_SESSION)) 
+  { 
+      session_start(); 
+  } 
+  $color_code = array('#f0c29c','#e89bae','#9ce2e1');
+  $random_color = $color_code[array_rand($color_code)];
+  $title = "Inicio";
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,7 +18,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <title>Hello, world!</title>
+    <title>Creativa - <?php echo $title;?></title>
     <link rel="stylesheet" href="css/estilosIndex.css">
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
@@ -29,7 +38,7 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
   </head>
-  <body style="background-color: #f0c29c;">
+  <body style="background-color: <?php echo $random_color;?>">
     <header>
       <!--User navbar-->
       <nav class="navbar navbar-dark navbar-expand-lg bg-dark" >
@@ -42,25 +51,44 @@
             </button>
           <div class="collapse navbar-collapse" style="justify-content: flex-end;" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
+            <?php if(isset($_SESSION['userName'])){ ?>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Nombre de usuario</a>
+                <div class = "row ml-auto">
+                  <div class="col-md-5">
+                  <a class="nav-link active" aria-current="page"><?php echo $_SESSION['userName']?></a>
+                  </div>
+                  <div class="col-md-5">
+                  <a class="nav-link active" aria-current="page"><?php echo $_SESSION['userLastName']?></a>
+                  </div>
+                </div>
               </li>
+            <?php }?>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" >Acciones:</a>
               </li>
+              <?php if(!isset($_SESSION['userName'])){ ?>
               <li class="nav-item">
                 <a class="nav-link" href="Vistas/v_login.php">Acceder</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Vistas/v_registro.php">Registro</a>
               </li>
+              <?php }?>
+              <?php 
+              if(isset($_SESSION["userName"])) 
+              { 
+                $verifyAdmin = $_SESSION["userEmail"];
+              } 
+              if(isset($_SESSION['userName']) && $verifyAdmin=="creativa.detallesp@gmail.com"){ ?>
               <li class="nav-item">
-                <a class="nav-link" href="#">Panel de control</a>
+                <a class="nav-link" href="Vistas/dashboard/index.php">Panel de control</a>
               </li>
+              <?php }?>
+              <?php if(isset($_SESSION['userName'])){ ?>
               <li class="nav-item">
-                <a class="nav-link" href="#">Salir</a>
+                <a class="nav-link" href="Controlador/C_logout.php">Salir</a>
               </li>
-              
+              <?php }?>
             </ul>
           </div>
         </div>
@@ -93,13 +121,13 @@
                     Productos
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Producto #1</a></li>
+                    <li><a class="dropdown-item" href="Vistas/productos.php">Todos los productos</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="Vistas/tazas.php">Producto #1</a></li>
                     <li><a class="dropdown-item" href="#">Producto #2</a></li>
                     <li><a class="dropdown-item" href="#">Producto #3</a></li>
                     <li><a class="dropdown-item" href="#">Producto #4</a></li>
                     <li><a class="dropdown-item" href="#">Producto #5</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Algo m&aacute;s</a></li>
                   </ul>
                 </li>
                 <li class="nav-item">
@@ -115,16 +143,16 @@
       </div>
     </header>
 
-    <div id="carouselExampleControls" class="carousel slide container" data-bs-ride="carousel">
+    <div id="carouselExampleControls" class="carousel slide container shadow" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="img/carrusel/img1.png" class="d-block w-100" alt="...">
+          <img src="img/carrusel/img1.png" class="d-block w-100 img-fluid" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="img/carrusel/img2.png" class="d-block w-100" alt="...">
+          <img src="img/carrusel/img2.png" class="d-block w-100 img-fluid" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="img/carrusel/img3.png" class="d-block w-100" alt="...">
+          <img src="img/carrusel/img3.png" class="d-block w-100 img-fluid" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
