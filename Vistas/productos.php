@@ -1,4 +1,8 @@
-<?php include_once 'header.php' ?>
+<?php 
+$title = "Productos";
+include_once 'header.php';
+?>
+
 <div class="container-sm"> 
     <div class="row mt-4" style="    text-align: -webkit-center;">
         <div class="col">

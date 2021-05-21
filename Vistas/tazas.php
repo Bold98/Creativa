@@ -1,4 +1,7 @@
-<?php include_once 'header.php' ?>
+<?php 
+$title = "Tazas";
+include_once 'header.php';
+?>
 <link rel="stylesheet" href="../css/cards.css">
 <script type="text/javascript" src="../js/cards.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/xzoom.min.js"></script>
