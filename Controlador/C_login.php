@@ -27,14 +27,14 @@
                         $_SESSION['userLastName'] =  $mostrar['apellido_cliente'];
                         $_SESSION['userEmail'] =  $mostrar['correo'];
                         $_SESSION['userPhone'] =  $mostrar['no_telefono'];
-                        $_SESSION['userRole'] =  $mostrar['Rol'];
+                        $_SESSION['userRole'] =  $mostrar['rol'];
                         ?>
                         <!--De momento la cuenta de administración envía a la página de registro.
                         ya que aún no contamos con interfaz. Esto fue sólo una prubea.
                         Planeo cambiar la forma en que funciona-->
                         <script>
                             window.location = "../index.php";
-                        </script>;
+                        </script>
                         <?php
                     }
                     else{
@@ -43,11 +43,11 @@
                         $_SESSION['userLastName'] =  $mostrar['apellido_cliente'];
                         $_SESSION['userEmail'] =  $mostrar['correo'];
                         $_SESSION['userPhone'] =  $mostrar['no_telefono'];
-                        $_SESSION['userRole'] =  $mostrar['Rol'];
+                        $_SESSION['userRole'] =  $mostrar['rol'];
                         ?>
                         <script>
                             window.location = "../index.php";
-                        </script>;
+                        </script>
                         <?php
                     }
                 }

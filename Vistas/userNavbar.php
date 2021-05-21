@@ -39,7 +39,7 @@
               } 
               if(isset($_SESSION['userName']) && $verifyAdmin=="creativa.detallesp@gmail.com"){ ?>
               <li class="nav-item">
-                <a class="nav-link" href="#">Panel de control</a>
+                <a class="nav-link" href="dashboard/index.php">Panel de control</a>
               </li>
               <?php }?>
               <?php if(isset($_SESSION['userName'])){ ?>
