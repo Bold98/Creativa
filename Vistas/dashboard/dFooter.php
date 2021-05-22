@@ -17,7 +17,7 @@
               <script>
                 document.write(new Date().getFullYear())
               </script>, made with <i class="material-icons">favorite</i> by
-              <a href="#" target="_blank">Creativa</a>.
+              <a href="#" target="_blank">GoldenRoostech</a>.
             </div>
           </div>
         </footer>
