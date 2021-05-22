@@ -1,3 +1,9 @@
+<?php 
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,7 +35,7 @@
   </head>
   <body class="">
     <div class="wrapper ">
-      <div class="sidebar" data-color="azure" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+      <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
         <!--
           Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -46,22 +52,33 @@
                 <p>Inicio</p>
               </a>
             </li>
-            <li class="nav-item active  ">
-              <a class="nav-link" href="productos.php">
+            <li class="nav-item active dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="bi bi-basket"></i>
-                <p>Productos</p>
+                  Productos
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="productoAgregar.php">Agregar</a>
+                <a class="dropdown-item" href="productoEditar.php">Editar</a>
+                <a class="dropdown-item" href="productoPV.php">Vista previa</a>
+              </div>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">
+              <i class="bi bi-person"></i>
+                <p>Usuarios</p>
               </a>
             </li>
             <li class="nav-item ">
               <a class="nav-link" href="#">
               <i class="bi bi-person"></i>
-                <p>No Activo</p>
+                <p>Pedidos</p>
               </a>
             </li>
             <li class="nav-item active-pro ">
-              <a class="nav-link" href="#">
-                <i class="material-icons">unarchive</i>
-                <p>Button</p>
+              <a class="nav-link" href="../../index.php">
+                <i class="bi bi-box-arrow-left"></i>
+                <p>Pagina principal</p>
               </a>
             </li>
           </ul>
@@ -81,6 +98,7 @@
               <span class="navbar-toggler-icon icon-bar"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end">  
+              <h4><?php echo $_SESSION["userName"]?></h4>
               <ul class="navbar-nav">
                 <li class="nav-item dropdown">
                   <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

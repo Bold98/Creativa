@@ -1,4 +1,6 @@
-<?php include_once 'header.php' ?>
+<?php 
+$title = "Registro";
+include_once 'header.php'; ?>
     <div class="row">
       <form class="formulario" method="POST">
         <h1>Registro de usuarios </h1>
