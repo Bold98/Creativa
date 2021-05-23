@@ -52,6 +52,12 @@ if(!isset($_SESSION))
                 <p>Inicio</p>
               </a>
             </li>
+            <li class="nav-item active  ">
+              <a class="nav-link" href="productos.php">
+              <i class="bi bi-basket"></i>
+                <p>Productos</p>
+              </a>
+            </li>
             <li class="nav-item active dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="bi bi-basket"></i>
