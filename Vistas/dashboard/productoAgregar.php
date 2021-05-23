@@ -1,6 +1,7 @@
 <?php 
 $title = "Productos";
-include_once 'dHeader.php';?>
+include_once 'dHeader.php';
+?>
    <!-- Aqui se agrega un producto a la BD, falta de agregar el php que hace la insercion --> 
    <div class="row">
         <div class="col-md-2">
@@ -12,7 +13,7 @@ include_once 'dHeader.php';?>
                     <p class="card-category">Formulario</p>
                 </div>
                 <div class=" card-body">
-                    <form class="formularioProducto" method="POST">
+                    <form class="formularioProducto" method="POST" enctype="multipart/form-data">
                         <div class="form-group">
                             <label class="bmd-label-floating" for="prodTipoSelect">Tipo de producto</label>
                             <select class="form-control" name="prodTipoSelect"  >
@@ -36,7 +37,7 @@ include_once 'dHeader.php';?>
                         </div>
                         <div class=" form-group">
                             <label class=" bmd-label-floating" for="prodPrecioInput">Precio</label>
-                            <input class="form-control" type="text" name="prodPrecioInput"><br>
+                            <input class="form-control" type="number" name="prodPrecioInput"><br>
                         </div>
                         <div class="form-group">
                             <label class="bmd-label-floating" for="prodDescInput">Descripcion</label>
@@ -50,23 +51,15 @@ include_once 'dHeader.php';?>
                             <div class=" table-responsive fileinput-preview fileinput-exists thumbnail img-raised"></div>
                             <div>
                                 <span class="btn btn-raised btn-round btn-default btn-file">
-                                    <input class="fileinput-new" type="file" name="prodImagenFile" />
+                                    <input class="fileinput-new" type="file" id="prodImagenFile" name="prodImagenFile" multiple>
                                 </span>
                                 <a href="#AgregarTitle" class="btn btn-danger btn-round fileinput-exists" data-dismiss="fileinput"><i class="bi bi-x-lg"></i> </a>
                             </div>
                         </div>
-                        
-                            <!--<br>
-                            <a>Nombre del producto</a>
-                            <input type="text" name="nombre_producto"><br>
-                            <a>descripcion del producto</a>
-                            <input type="text" name="descripcion"><br>
-                            <a>Imagen del producto</a>
-                            <input type="file" name="imagen_prod"><br>
-                            <a>Precio</a>
-                            <input type="text" name="precio"><br>
-                            <br>-->
                         <input type="submit" value="Agregar" class="btn btn-primary pull-right" name="agregarBtn">
+                        <?php
+                        include("../../Controlador/C_add_prod.php");
+                        ?>
                     </form>
                 </div>
             </div>
