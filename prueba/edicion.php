@@ -10,7 +10,9 @@
         <meta name="viewport" content="witdth=device-width,
         user-scaleble-no, initial-scale-1.0, maximum-scale=1.0,
         minimun-scale=1.0">
-        //<link rel="stylesheet" href="estilos_tablas_edicion.css">
+        <!--Esta es la referencia de estilo,
+         tengo 2 archivos dependiendo de la cantidad de columnas-->
+        <link rel="stylesheet" href="estilos_tablas_edicion.css">
     </head>
 
     <body>
@@ -21,6 +23,7 @@
             <div class="table__header">Descripción</div>
             <div class="table__header">Stock</div>
             <div class="table__header">Precio</div>
+            <div class="table__header">Activo</div>
             <div class="table__header">Operación</div>
         
 
@@ -31,12 +34,17 @@
             <div class="table__item"><?php echo $row["descripcion"];?></div>
             <div class="table__item"><?php echo $row["stock"];?></div>
             <div class="table__item"><?php echo $row["precio"];?></div>
+            <div class="table__item"><?php echo $row["activo"];?></div>
             <div class="table__item">
-                <a href="actualizar.php?id=<?php echo $row["id_producto"];?>" class="table__item__link">Editar | </a>
-                <a href="eliminar.php" class="table__item__link">Eliminar</a>
+            <!--Estas referencias accionan a los respectivos archivos de cada función que esta en la columna de operación-->
+                <a href="actualizar.php?id=<?php echo $row["id_producto"];?>" class="table__item__link">Editar|</a>
+                <a href="procesar_eliminar.php?id=<?php echo $row["id_producto"];?>" class="table__item__link">Eliminar|</a>
+                <a href="cambiar.php?id=<?php echo $row["id_producto"];?>" class="table__item__link">Cambiar estado</a>
             </div>
-           
-            <?php } mysqli_free_result($resultado);?>
+            <!--Esta alerta sólo debería salir en eliminar pero sale en todas
+            nomas dale click en que si para continuar-->
+            <script src="confirmacion.js"></script>
+            <?php } mysqli_free_result($resultado);?> 
         </div>
     </body>
 </html>
