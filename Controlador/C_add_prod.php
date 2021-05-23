@@ -1,10 +1,10 @@
 <?php
     //Es para que se conecte a la base de datos
-    include ("../Modelo/Conexion_BD.php");
-    //$conexion_bd = mysqli_connect("localhost", "root", "", "creativa");
+    //include ("../Modelo/Conexion_BD.php");
+    $conexion_bd = mysqli_connect("localhost", "root", "", "creativa");
 
     //if el botón agregarBTN fue presionado
-    if(isset($_POST['agregarBTN'])){
+    if(isset($_POST['agregarBtn'])){
         //Comprobar que llenara los campos
         if(strlen($_POST['prodNombreInput']) >= 1 &&
           strlen($_POST['prodPrecioInput']) >= 1){
@@ -13,9 +13,9 @@
             $prodPrecio = $_POST['prodPrecioInput'];
             $prodDescr = $_POST['prodDescInput'];
             //revisar tamaño de archivo
-            $revisar = getimagesize($_FILES["prodImagenFile"]["tempName"]);
+            $revisar = getimagesize($_FILES["prodImagenFile"]["tmp_name"]);
             if($revisar !== false){
-                $image = $_FILES['prodImagenFile']['tempName'];
+                $image = $_FILES['prodImagenFile']['tmp_name'];
                 $prodImagen = addslashes(file_get_contents($image));
 
                 $insertar = "INSERT INTO producto (tipo_prod, nombre_producto, precio, descripcion, imagen_prod)
@@ -24,10 +24,16 @@
                 //Datos subidos a base de datos
                 if($resultado){
                     ?>
-                    <script>
-                        alert("El registro se realizó con éxito.");
-                        window.location = "../Vistas/dashboard/productoAgregar.php";
-                    </script>;
+                    <div id = "div_error" class="alert alert-success" role="alert">
+                        El producto fue registrado correctamente.
+                    </div>
+                    <?php
+                }
+                else{
+                    ?>
+                    <div id = "div_error" class="alert alert-danger" role="alert">
+                        Ocurrió un error.
+                    </div>
                     <?php
                 }
             }
