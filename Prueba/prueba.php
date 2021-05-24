@@ -1,7 +1,5 @@
-<?php 
-$title = "Productos";
-include_once 'dHeader.php';
-include ("../../Modelo/Conexion_BD.php");
+<?php
+include("conexion.php");
 $producto = "SELECT * FROM producto";
 
     $Host = 'localhost';
@@ -9,21 +7,11 @@ $producto = "SELECT * FROM producto";
     $Password = '';
     $dbName = 'creativa';
     $bd = new mysqli($Host, $Username, $Password, $dbName);
-    ?>
-    <div>
-        <a href="productoAgregar.php"><button type="button" class="btn btn-primary"><i class="bi bi-plus-lg"></i> Nuevo producto</button></a>
-        
-    </div>
-    <div class=" card">
-        <div class="card-header card-header-primary">
-            <h4 class="card-title">Productos</h4>
-            <p class="card-category">Formulario</p>
-        </div>
-        <div class="row mt-2">
-            <div class=" col-md-1">
-            </div>
-            <div class=" col-md-10">
-                <table class="table table-bordered">
+?>
+<html>
+    <body>
+        <div>
+            <table>
                 <thead>
                     <th scope="col">Id</th>
                     <th scope="col">Tipo</th>
@@ -36,7 +24,7 @@ $producto = "SELECT * FROM producto";
                 </thead>
                 <tbody>
                     <?php
-                    $resultado = mysqli_query($conexion_bd, $producto);
+                    $resultado = mysqli_query($con, $producto);
                     while($row=mysqli_fetch_assoc($resultado)){?>
                         <?php $id = $row["id_producto"];?>
                         <tr>
@@ -51,7 +39,7 @@ $producto = "SELECT * FROM producto";
                                     if($result = $bd->query("SELECT id_producto FROM producto")){
                                         $row_cnt = $result->num_rows;
                                         while($id <= $row_cnt){
-                                            echo "<img src='C_vista_foto_prod.php?id=".$id."'/>";
+                                            echo "<img src='vista.php?id=".$id."'/>";
                                             $id+=3;
                                         }
                                     }
@@ -68,12 +56,7 @@ $producto = "SELECT * FROM producto";
                         </tr>
                     <?php } mysqli_free_result($resultado);?>
                 </tbody>
-                </table>
-            </div>
-            <div class=" col-md-1">
-            </div>
+            </table>
         </div>
-        
-    </div>
-    
-<?php include_once 'dFooter.php'?>
+    </body>
+</html>
