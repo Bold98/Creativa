@@ -51,7 +51,7 @@ $producto = "SELECT * FROM producto";
                                     if($result = $bd->query("SELECT id_producto FROM producto")){
                                         $row_cnt = $result->num_rows;
                                         if($id <= $row_cnt){
-                                            echo "<img src='../../Controlador/C_vista_foto_prod.php?id=".$id."'/>";
+                                            echo "<img style='max-width: 50%; height: auto;' class='img-thumbnail' src='../../Controlador/C_vista_foto_prod.php?id=".$id."'/>";
                                         }
                                     }
                                 ?>
