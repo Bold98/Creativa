@@ -50,9 +50,8 @@ $producto = "SELECT * FROM producto";
                                 <?php
                                     if($result = $bd->query("SELECT id_producto FROM producto")){
                                         $row_cnt = $result->num_rows;
-                                        while($id <= $row_cnt){
-                                            echo "<img src='C_vista_foto_prod.php?id=".$id."'/>";
-                                            $id+=3;
+                                        if($id <= $row_cnt){
+                                            echo "<img src='../../Controlador/C_vista_foto_prod.php?id=".$id."'/>";
                                         }
                                     }
                                 ?>
