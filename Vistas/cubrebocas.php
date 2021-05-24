@@ -1,5 +1,5 @@
 <?php 
-$title = "Tazas";
+$title = "Cubrebocas";
 include_once 'header.php';
 ?>
 <link rel="stylesheet" href="../css/cards.css">
@@ -13,10 +13,10 @@ include_once 'header.php';
                 <section id="default" class="padding-top0">
                     <div class="large-5 column">
                         <div class="xzoom-container"> 
-                            <img class="xzoom" id="xzoom-default" src="../img/productos/taza.png" xoriginal="../img/productos/tazaOriginal.png" />
+                            <img class="xzoom" id="xzoom-default" src="../img/productos/Cubrebocas.png" xoriginal="../img/productos/CojinOriginal.png" />
                             <div class="xzoom-thumbs" style="text-align: center;"> 
-                                <a href="../img/productos/tazaOriginal.png"> 
-                                    <img class="xzoom-gallery" width="80" src="../img/productos/tazaMini.png" xpreview="../img/productos/taza.png">
+                                <a href="../img/productos/CubrebocasOriginal.png"> 
+                                    <img class="xzoom-gallery" width="80" src="../img/productos/CubrebocasMini.png" xpreview="../img/productos/Cubrebocas.png">
                                 </a> 
                                 <!--<a href="https://i.imgur.com/oNaczTl.jpg"> 
                                     <img class="xzoom-gallery" width="80" src="https://i.imgur.com/r03r46u.jpg"> 
