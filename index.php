@@ -5,7 +5,7 @@
   } 
   $color_code = array('#f0c29c','#e89bae','#9ce2e1');
   $random_color = $color_code[array_rand($color_code)];
-  $title = "Inicio";
+  $title = "Inicio Index";
 ?>
 <!doctype html>
 <html lang="en">
