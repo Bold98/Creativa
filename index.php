@@ -5,7 +5,7 @@
   } 
   $color_code = array('#f0c29c','#e89bae','#9ce2e1');
   $random_color = $color_code[array_rand($color_code)];
-  $title = "Inicio";
+  $title = "Inicio Index";
 ?>
 <!doctype html>
 <html lang="en">
@@ -20,6 +20,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <title>Creativa - <?php echo $title;?></title>
     <link rel="stylesheet" href="css/estilosIndex.css">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
@@ -164,14 +165,6 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <br>
     <br>
     <br>

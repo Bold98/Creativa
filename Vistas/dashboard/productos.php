@@ -3,12 +3,6 @@ $title = "Productos";
 include_once 'dHeader.php';
 include ("../../Modelo/Conexion_BD.php");
 $producto = "SELECT * FROM producto";
-
-    $Host = 'localhost';
-    $Username = 'root';
-    $Password = '';
-    $dbName = 'creativa';
-    $bd = new mysqli($Host, $Username, $Password, $dbName);
     ?>
     <div>
         <a href="productoAgregar.php"><button type="button" class="btn btn-primary"><i class="bi bi-plus-lg"></i> Nuevo producto</button></a>
@@ -48,7 +42,7 @@ $producto = "SELECT * FROM producto";
                             <td><?php echo $row["stock"]?></td>
                             <td>
                                 <?php
-                                    if($result = $bd->query("SELECT id_producto FROM producto")){
+                                    if($result = $conexion_bd->query("SELECT id_producto FROM producto")){
                                         $row_cnt = $result->num_rows;
                                         if($id <= $row_cnt){
                                             echo "<img style='max-width: 50%; height: auto;' class='img-thumbnail' src='../../Controlador/C_vista_foto_prod.php?id=".$id."'/>";

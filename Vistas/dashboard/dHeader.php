@@ -58,17 +58,6 @@ if(!isset($_SESSION))
                 <p>Productos</p>
               </a>
             </li>
-            <li class="nav-item active dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="bi bi-basket"></i>
-                  Productos
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="productoAgregar.php">Agregar</a>
-                <a class="dropdown-item" href="productoEditar.php">Editar</a>
-                <a class="dropdown-item" href="productoPV.php">Vista previa</a>
-              </div>
-            </li>
             <li class="nav-item ">
               <a class="nav-link" href="#">
               <i class="bi bi-person"></i>
