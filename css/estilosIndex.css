@@ -1,0 +1,34 @@
+body {
+    min-height: 100vh;
+}
+
+.bg-cover {
+    background-size: cover !important;
+}
+
+.headBanner {
+    -webkit-filter: drop-shadow(1px 1px 0 white)
+                    drop-shadow(-1px -1px 0 white);
+    filter: drop-shadow(1px 1px 0 white) 
+            drop-shadow(-1px -1px 0 white);
+  }
+
+.imgCarrusel{
+    width: 25%;
+}
+
+.nav-link{
+    padding: 0;
+}
+
+.creativaFont1{
+    
+}
+
+/*.navbar-nav2 {
+    display: flex;
+    flex-direction: column; 
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}*/

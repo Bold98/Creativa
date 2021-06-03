@@ -1,0 +1,19 @@
+@font-face {
+    font-family: Cocogoose;
+    src: url(../fonts/Cocogoose.ttf);
+}
+
+@font-face {
+    font-family: PerfectCC;
+    src: url(../fonts/Perfect_fonts_CC.ttf);
+}
+
+.CreativaFont1{
+    font-size: 65px;
+    font-family: PerfectCC;
+    color: #FF637D;
+}
+
+.CreativaFont2{
+    font-family: Cocogoose;
+}
