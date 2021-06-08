@@ -8,8 +8,18 @@ include_once 'header.php';
 <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/bbbootstrap/libraries/main/xzoom.css" media="all" />
 <div class="container"> 
     <div class="row mb-5 mt-4">
-        <div class="col-md-4">
-            <div class="container d-flex justify-content-center">
+    <div class="col-md-7 mt-4 ">
+            <h1 class=" CreativaFont1">Nombre del producto</h1>
+            <br>
+            <p class="CreativaFont2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a consectetur mauris, quis blandit elit. Donec euismod libero sed est bibendum, vitae feugiat augue fringilla. Aliquam ut pharetra ante. Etiam at egestas tortor, sit amet maximus tellus. Vestibulum imperdiet sollicitudin lectus id fringilla. Mauris tempor blandit metus a venenatis. </p>
+            <div class="frame">
+                <h6>Añade el producto a tu carrito o contactanos para un producto personalizado</h6>
+                <button class=" m-2 custom-btn btn-5"><i class="bi bi-cart"></i> Comprar</button>
+                <button class=" m-2 custom-btn btn-5"><i class="bi bi-person-lines-fill"></i></i> Contacto</button>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="container d-flex">
                 <section id="default" class="padding-top0">
                     <div class="large-5 column">
                         <div class="xzoom-container"> 
@@ -33,12 +43,6 @@ include_once 'header.php';
                 </section>
             </div>
         </div>
-        <div class="col-md-8 mt-4">
-            <h1>Nombre del producto</h1>
-            <br>
-            <h4 class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a consectetur mauris, quis blandit elit. Donec euismod libero sed est bibendum, vitae feugiat augue fringilla. Aliquam ut pharetra ante. Etiam at egestas tortor, sit amet maximus tellus. Vestibulum imperdiet sollicitudin lectus id fringilla. Mauris tempor blandit metus a venenatis. </h4>
-        </div>
-        
     </div>
 </div>
 <?php include_once 'footer.php' ?>
