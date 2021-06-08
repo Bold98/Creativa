@@ -14,8 +14,8 @@ include_once 'header.php';
             <p class="CreativaFont2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a consectetur mauris, quis blandit elit. Donec euismod libero sed est bibendum, vitae feugiat augue fringilla. Aliquam ut pharetra ante. Etiam at egestas tortor, sit amet maximus tellus. Vestibulum imperdiet sollicitudin lectus id fringilla. Mauris tempor blandit metus a venenatis. </p>
             <div class="frame">
                 <h6>Añade el producto a tu carrito o contactanos para un producto personalizado</h6>
-                <button class=" m-2 custom-btn btn-5"><i class="bi bi-cart"></i> Comprar</button>
-                <button class=" m-2 custom-btn btn-5"><i class="bi bi-person-lines-fill"></i></i> Contacto</button>
+                <a href="#"><button class=" m-2 custom-btn btn-5"><i class="bi bi-cart"></i> Comprar</button></a>
+                <a href="#"><button class=" m-2 custom-btn btn-5"><i class="bi bi-person-lines-fill"></i></i> Contacto</button></a>
             </div>
         </div>
         <div class="col-md-5">
