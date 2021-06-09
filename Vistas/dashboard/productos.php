@@ -17,50 +17,50 @@ $producto = "SELECT * FROM producto";
             <div class=" col-md-1">
             </div>
             <div class=" col-md-10">
-                <table class="table table-bordered">
-                <thead>
-                    <th scope="col">Id</th>
-                    <th scope="col">Tipo</th>
-                    <th scope="col">Nombre</th>
-                    <th scope="col">Descripcion</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col">Stock</th>
-                    <th scope="col">Imagen</th>
-                    <th scope="col">Acciones</th>
-                </thead>
-                <tbody>
-                    <?php
-                    $resultado = mysqli_query($conexion_bd, $producto);
-                    while($row=mysqli_fetch_assoc($resultado)){?>
-                        <?php $id = $row["id_producto"];?>
-                        <tr>
-                            <th scope="row"><?php echo $row["id_producto"]?></th>
-                            <td><?php echo $row["tipo_prod"]?></td>
-                            <td><?php echo $row["nombre_producto"]?></td>
-                            <td><?php echo $row["descripcion"]?></td>
-                            <td><?php echo $row["precio"]?></td>
-                            <td><?php echo $row["stock"]?></td>
-                            <td>
-                                <?php
-                                    if($result = $conexion_bd->query("SELECT id_producto FROM producto")){
-                                        $row_cnt = $result->num_rows;
-                                        if($id <= $row_cnt){
-                                            echo "<img style='max-width: 50%; height: auto;' class='img-thumbnail' src='../../Controlador/C_vista_foto_prod.php?id=".$id."'/>";
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <th scope="col">Id</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Imagen</th>
+                        <th scope="col">Acciones</th>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $resultado = mysqli_query($conexion_bd, $producto);
+                        while($row=mysqli_fetch_assoc($resultado)){?>
+                            <?php $id = $row["id_producto"];?>
+                            <tr>
+                                <th scope="row"><?php echo $row["id_producto"]?></th>
+                                <td><?php echo $row["tipo_prod"]?></td>
+                                <td><?php echo $row["nombre_producto"]?></td>
+                                <td><?php echo $row["descripcion"]?></td>
+                                <td><?php echo $row["precio"]?></td>
+                                <td><?php echo $row["stock"]?></td>
+                                <td>
+                                    <?php
+                                        if($result = $conexion_bd->query("SELECT id_producto FROM producto")){
+                                            $row_cnt = $result->num_rows;
+                                            if($id <= $row_cnt){
+                                                echo "<img style='max-width: 50%; height: auto;' class='img-thumbnail' src='../../Controlador/C_vista_foto_prod.php?id=".$id."'/>";
+                                            }
                                         }
-                                    }
-                                ?>
-                            </td>
-                            <td>
-                                <a href="productoEditar.php?id=<?php echo $row["id_producto"];?>">
-                                    <button type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i></button>
-                                </a>
-                                <a href="../../Controlador/C_delete_prod.php?id=<?php echo $row["id_producto"];?>">
-                                    <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
-                                </a>
-                            </td>
-                        </tr>
-                    <?php } mysqli_free_result($resultado);?>
-                </tbody>
+                                    ?>
+                                </td>
+                                <td>
+                                    <a href="productoEditar.php?id=<?php echo $row["id_producto"];?>">
+                                        <button type="button" class="btn btn-success"><i class="bi bi-pencil-square"></i></button>
+                                    </a>
+                                    <a href="../../Controlador/C_delete_prod.php?id=<?php echo $row["id_producto"];?>">
+                                        <button type="button" class="btn btn-danger"><i class="bi bi-trash"></i></button>
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php } mysqli_free_result($resultado);?>
+                    </tbody>
                 </table>
             </div>
             <div class=" col-md-1">

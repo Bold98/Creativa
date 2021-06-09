@@ -9,11 +9,12 @@
 }
 
 .CreativaFont1{
-    font-size: 65px;
+    font-size: 60px;
     font-family: PerfectCC;
-    color: #FF637D;
 }
 
 .CreativaFont2{
     font-family: Cocogoose;
+    font-size: 1em;
+    text-align: justify;
 }
