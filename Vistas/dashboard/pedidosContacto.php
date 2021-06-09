@@ -1,5 +1,5 @@
 <?php 
-$title = "Pedidos";
+$title = "Pedidos Personalizados";
 include_once 'dheader.php';
 include ("../../Modelo/Conexion_BD.php");
 $pedido = "SELECT * FROM pedido_personalizado";
@@ -8,7 +8,7 @@ $pedido = "SELECT * FROM pedido_personalizado";
 <div class="container">
     <div class="card">
         <div class="card-header card-header-primary">
-            <h4 class="card-title">Pedidos</h4>
+            <h4 class="card-title">Pedidos personalizados</h4>
         </div>
         <div class="card-body">
             <table class="table table-bordered table-hover">

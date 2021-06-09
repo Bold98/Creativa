@@ -65,9 +65,15 @@ if(!isset($_SESSION))
               </a>
             </li>
             <li class="nav-item active ">
-              <a class="nav-link" href="pedidos.php">
+              <a class="nav-link" href="pedidosTemporada.php">
               <i class="bi bi-person"></i>
-                <p>Pedidos</p>
+                <p>Pedidos de temporada</p>
+              </a>
+            </li>
+            <li class="nav-item active ">
+              <a class="nav-link" href="PedidosContacto.php">
+              <i class="bi bi-person"></i>
+                <p>Pedidos personalizados</p>
               </a>
             </li>
             <li class="nav-item active-pro ">
