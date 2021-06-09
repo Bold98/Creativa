@@ -1,4 +1,5 @@
 <?php
+include("C_login.php");
 $conexion_bd = mysqli_connect("localhost", "root", "", "creativa2");
 if(!isset($_SESSION)) { 
     session_start();
