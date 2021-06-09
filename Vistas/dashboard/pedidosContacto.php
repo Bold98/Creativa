@@ -29,15 +29,17 @@ $pedido = "SELECT * FROM pedido_personalizado";
                                 <th scope="row"><?php echo $row["id_pedido_P"]?></th>
                                 <td><?php echo $row["id_producto"]?></td>
                                 <td><?php echo $row["cantidad"]?></td>
-                                <td><?php echo $row["descripcion"]?></td>
-                                <?php
-                                    if($result = $conexion_bd->query("SELECT id_pedido_P FROM pedido_personalizado")){
-                                        $row_cnt = $result->num_rows;
-                                        if($id <= $row_cnt){
-                                            echo "<img style='max-width: 50%; height: auto;' class='img-thumbnail' src='../../Controlador/C_vista_foto_pedido.php?id=".$id."'/>";
+                                <td>
+                                    <?php
+                                        if($result = $conexion_bd->query("SELECT id_pedido_P FROM pedido_personalizado")){
+                                            $row_cnt = $result->num_rows;
+                                            if($id <= $row_cnt){
+                                                echo "<img style='max-width: 50%; height: auto;' class='img-thumbnail' src='../../Controlador/C_vista_foto_pedido.php?id=".$id."'/>";
+                                            }
                                         }
-                                    }
-                                ?>
+                                    ?>
+                                </td>
+                                <td><?php echo $row["descripcion"]?></td>
                                 <td><?php echo $row["id_cliente"]?></td>
                             </tr>
                         <?php } mysqli_free_result($resultado);?>

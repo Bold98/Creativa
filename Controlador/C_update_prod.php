@@ -1,6 +1,6 @@
 <?php
     //include("../Modelo/Conexion_BD.php");
-    $conexion_bd = mysqli_connect("localhost", "root", "", "creativa");
+    $conexion_bd = mysqli_connect("localhost", "root", "", "creativa2");
 
     if(isset($_POST['editarBtn'])){
         //Comprobar que llenara los campos
