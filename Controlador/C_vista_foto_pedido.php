@@ -5,7 +5,7 @@ if(!empty($_GET['id']))
     $Host = 'localhost';
     $Username = 'root';
     $Password = '';
-    $dbName = 'creativa2';
+    $dbName = 'creativa';
     
     //Crear conexion mysql
     $conexion_db = new mysqli($Host, $Username, $Password, $dbName);
