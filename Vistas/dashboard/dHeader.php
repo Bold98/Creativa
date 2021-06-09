@@ -64,8 +64,8 @@ if(!isset($_SESSION))
                 <p>Usuarios</p>
               </a>
             </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="#">
+            <li class="nav-item active ">
+              <a class="nav-link" href="pedidos.php">
               <i class="bi bi-person"></i>
                 <p>Pedidos</p>
               </a>
