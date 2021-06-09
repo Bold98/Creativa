@@ -20,6 +20,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <title>Creativa - <?php echo $title;?></title>
     <link rel="stylesheet" href="css/estilosIndex.css">
+    <link rel="stylesheet" href="css/fonts.css">
     <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
@@ -172,14 +173,6 @@
     <br>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
     <footer class="container"> 
       <footer class="text-center text-white" style="background-color: #ff8297;">
         <!-- Grid container -->
@@ -189,7 +182,7 @@
             <!-- Facebook -->
             <a
               class="btn btn-link btn-floating btn-lg text-dark m-1"
-              href="#!"
+              href="https://www.facebook.com/Creativa-102791245122700"
               role="button"
               data-mdb-ripple-color="dark"
               ><i class="bi bi-facebook"></i></i
@@ -198,7 +191,7 @@
             <!-- Twitter -->
             <a
               class="btn btn-link btn-floating btn-lg text-dark m-1"
-              href="#!"
+              href="!"
               role="button"
               data-mdb-ripple-color="dark"
               ><i class="bi bi-twitter"></i></i
@@ -207,7 +200,7 @@
             <!-- Instagram -->
             <a
               class="btn btn-link btn-floating btn-lg text-dark m-1"
-              href="#!"
+              href="https://www.instagram.com/creativahmo/"
               role="button"
               data-mdb-ripple-color="dark"
               ><i class="bi bi-instagram"></i></i

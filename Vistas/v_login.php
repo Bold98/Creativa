@@ -1,4 +1,6 @@
-<?php include_once 'header.php' ?>
+<?php 
+$title = "Login";
+include_once 'header.php'; ?>
     <div class="">
         <form class="formulario" method="POST">
             <h1>Inicio de sesión</h1>

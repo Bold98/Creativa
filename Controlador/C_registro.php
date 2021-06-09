@@ -2,7 +2,6 @@
     //Es para que se conecte a la base de datos
     include("../Modelo/Conexion_BD.php");
 
-
     //if el botón registrarBtn fue presionado
     if (isset($_POST['registrarBtn'])){
        
@@ -50,7 +49,7 @@
                         ?>
                         <script>
                             alert("El registro se realizó con éxito.");
-                            window.location = "../index.html";
+                            window.location = "../index.php";
                         </script>;
                         <?php
                     }
