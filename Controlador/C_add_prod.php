@@ -1,7 +1,7 @@
 <?php
     //Es para que se conecte a la base de datos
     //include ("../Modelo/Conexion_BD.php");
-    $conexion_bd = mysqli_connect("localhost", "root", "", "creativa");
+    $conexion_bd = mysqli_connect("localhost", "root", "", "creativa2");
 
     //if el botón agregarBTN fue presionado
     if(isset($_POST['agregarBtn'])){
