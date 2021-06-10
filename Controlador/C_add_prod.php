@@ -2,7 +2,8 @@
     //Es para que se conecte a la base de datos
     //include ("../Modelo/Conexion_BD.php");
     $conexion_bd = mysqli_connect("localhost", "root", "", "creativa");
-
+    require("C_comprimirImg.php");
+    $obj= new Comprimir();
     //if el botón agregarBTN fue presionado
     if(isset($_POST['agregarBtn'])){
         //Comprobar que llenara los campos
@@ -16,7 +17,8 @@
             $revisar = getimagesize($_FILES["prodImagenFile"]["tmp_name"]);
             if($revisar !== false){
                 $image = $_FILES['prodImagenFile']['tmp_name'];
-                $prodImagen = addslashes(file_get_contents($image));
+                
+                $prodImagen = addslashes(file_get_contents($obj->comprimir($image,75)));
 
                 $insertar = "INSERT INTO producto (tipo_prod, nombre_producto, precio, descripcion, imagen_prod)
                             VALUES('$prodTipo','$prodNombre','$prodPrecio','$prodDescr','$prodImagen')";
@@ -50,6 +52,9 @@
            <?php
         }
     }
+
+
+    
 ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
