@@ -13,7 +13,7 @@ include_once 'dcHeader.php';?>
                     <p class="card-category">Formulario con informaición del usuario</p>
                 </div>
                 <div class=" mt-4 card-body">
-                  <form>
+                  <form method="POST" enctype="multipart/form-data">
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-group">
