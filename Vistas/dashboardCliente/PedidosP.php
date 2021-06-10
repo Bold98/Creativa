@@ -9,7 +9,7 @@ $pedido = "SELECT * from pedido_personalizado WHERE id_cliente='$idUsuario' ";
 <div class="container">
     <div class="card">
         <div class="card-header card-header-primary">
-            <h4 class="card-title">Historial de Pedidos</h4>
+            <h4 class="card-title">Historial de Pedidos Personalizados</h4>
         </div>
         <div class="card-body">
             <table class="table table-bordered table-hover">

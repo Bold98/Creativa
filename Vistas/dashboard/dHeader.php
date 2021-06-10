@@ -66,13 +66,13 @@ if(!isset($_SESSION))
             </li>
             <li class="nav-item active ">
               <a class="nav-link" href="pedidosTemporada.php">
-              <i class="bi bi-person"></i>
+              <i class="bi bi-mailbox2"></i>
                 <p>Pedidos de temporada</p>
               </a>
             </li>
             <li class="nav-item active ">
               <a class="nav-link" href="PedidosContacto.php">
-              <i class="bi bi-person"></i>
+              <i class="bi bi-mailbox"></i>
                 <p>Pedidos personalizados</p>
               </a>
             </li>

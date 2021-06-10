@@ -48,7 +48,7 @@ if(!isset($_SESSION))
           <ul class="nav">
             <li class="nav-item active  ">
               <a class="nav-link" href="index.php">
-              <i class="bi bi-receipt"></i>
+              <i class="bi bi-person"></i>
                 <p>Inicio</p>
               </a>
             </li>

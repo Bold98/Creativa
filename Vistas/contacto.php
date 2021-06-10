@@ -31,7 +31,7 @@
                 <label for="exampleFormControlTextarea1" class="form-label CreativaFont2"> Descripción:</label>
                 <textarea class="form-control" name="descripcionP" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn custom-btn btn-5" name="enviarBtn">Enviar:</button>
+            <button type="submit" class="btn custom-btn btn-5" name="enviarBtn">Enviar</button>
         </div>
         <?php include("../Controlador/C_contacto.php"); ?>
     </form>
