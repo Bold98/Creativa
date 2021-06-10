@@ -1,13 +1,12 @@
 <?php $title = "Contactanos"; include_once 'header.php'; ?>
 
 
-<h1>Pedido personalizado</h1>
+<h1 class=" CreativaFont1">Pedido por contacto</h1>
 <div class="form-group">
     <form class="formulario" method="POST" enctype="multipart/form-data">
         <div class="container mb-4">
-
-            <label class="bmd-label-floating" for="prodTipoSelect">Tipo de producto</label><br>
-            <select class="mb-3" name="prodTipoSelect"  >
+            <label class="bmd-label-floating CreativaFont2" for="prodTipoSelect">Tipo de producto</label><br>
+            <select class=" form-select" name="prodTipoSelect"  >
                 <option value="1">Playera sublimada chica</option>
                 <option value="2">Playera sublimada mediana</option>
                 <option value="3">Playera sublimada grande</option>
@@ -23,19 +22,18 @@
             </select>
             <br>
             <div class="mb-3">
-                 <label for="exampleInputEmail1" class="form-label">Cantidad de producto</label>
+                 <label for="exampleInputEmail1" class="form-label CreativaFont2">Cantidad de producto</label>
                  <input type="number" class="form-control" name="cantidadP">
-                
             </div>
             <br>
-            <label for="exampleInputEmail1" class="form-label">Seleccionar imagen</label>
+            <label for="exampleInputEmail1" class="form-label CreativaFont2">Seleccionar imagen</label>
             <input type="file" class="form-control" id="imgP" name="imgP" multiple>
             <br>
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label"> Descripción </label>
+                <label for="exampleFormControlTextarea1" class="form-label CreativaFont2"> Descripción </label>
                 <textarea class="form-control" name="descripcionP" rows="3"></textarea>
             </div>
-            <button type="submit" class="btn btn-secondary btn-lg" name="enviarBtn">Enviar UwU</button>
+            <button type="submit" class="btn custom-btn btn-5" name="enviarBtn">Enviar</button>
         </div>
         <?php
         include("../Controlador/C_contacto.php");

@@ -84,7 +84,7 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contactanos</a>
+                  <a class="nav-link" href="contacto.php">Contactanos</a>
                 </li>
               </ul>
               <form class="d-flex">
