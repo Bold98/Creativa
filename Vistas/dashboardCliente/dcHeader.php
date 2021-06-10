@@ -49,7 +49,19 @@ if(!isset($_SESSION))
             <li class="nav-item active  ">
               <a class="nav-link" href="index.php">
               <i class="bi bi-receipt"></i>
+                <p>Inicio</p>
+              </a>
+            </li>
+            <li class="nav-item active  ">
+              <a class="nav-link" href="Pedidos.php">
+              <i class="bi bi-receipt"></i>
                 <p>Pedidos</p>
+              </a>
+            </li>
+            <li class="nav-item active  ">
+              <a class="nav-link" href="pedidosp.php">
+              <i class="bi bi-receipt"></i>
+                <p>Pedidos personalizados</p>
               </a>
             </li>
             <li class="nav-item active-pro ">

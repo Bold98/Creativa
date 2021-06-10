@@ -1,8 +1,6 @@
 <?php 
 $title = "Inicio";
-include_once 'dcHeader.php';
-include ("../../Modelo/Conexion_BD.php");
-?>
+include_once 'dcHeader.php';?>
 <div class="content">
     <div class="container-fluid">
         <div class="row">
@@ -11,8 +9,8 @@ include ("../../Modelo/Conexion_BD.php");
             <div class="col-md-10">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title">Perfil de usuario</h4>
-                  <p class="card-category"></p>
+                    <h4 class="card-title">Editar perfil</h4>
+                    <p class="card-category">Formulario con informaición del usuario</p>
                 </div>
                 <div class=" mt-4 card-body">
                   <form>
@@ -20,13 +18,13 @@ include ("../../Modelo/Conexion_BD.php");
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Nombre</label>
-                          <input class="form-control" type="text" value="<?php echo $_SESSION['userName'];?>" disabled>
+                          <input class="form-control" type="text" name="UsuarioNombre" value="<?php echo $_SESSION['userName'];?>" >
                         </div>
                       </div>
                       <div class="col-md-6">
                         <div class="form-group">
                           <label class="bmd-label-floating">Apellido</label>
-                          <input class="form-control" type="text" value="<?php echo $_SESSION['userLastName'];?>" disabled>
+                          <input class="form-control" type="text" name="UsuarioApellido" value="<?php echo $_SESSION['userLastName'];?>" >
                         </div>
                       </div>
                     </div>
@@ -34,22 +32,22 @@ include ("../../Modelo/Conexion_BD.php");
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Número de telefono</label>
-                          <input class="form-control" type="text" value="<?php echo $_SESSION['userPhone'];?>" disabled>
+                          <input class="form-control" type="text" name="UsuarioPhone" value="<?php echo $_SESSION['userPhone'];?>" >
                         </div>
                       </div>
                       <div class="col-md-8">
                         <div class="form-group">
                           <label class="bmd-label-floating">Correo</label>
-                          <input class="form-control" type="text" value="<?php echo $_SESSION['userEmail'];?>" disabled>
+                          <input class="form-control" type="text" name="UsuarioMail" value="<?php echo $_SESSION['userEmail'];?>" >
                         </div>
                       </div>
                     </div>
-                    
+                        <input type="submit" value="Editar" class="btn btn-primary pull-right" name="editarBtn">
+                        <?php
+                            include("../../Controlador/C_update_usuario.php");
+                        ?>
                     <div class="clearfix"></div>
                   </form>
-                  <a href="indexUpdate.php">
-                        <button class="btn btn-primary pull-right">Actualizar Información</button>
-                    </a>
                 </div>
               </div>
             </div>
