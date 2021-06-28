@@ -12,7 +12,7 @@ include ("../../Modelo/Conexion_BD.php");
               <div class="card">
                 <div class="card-header card-header-primary">
                   <h4 class="card-title">Perfil de usuario</h4>
-                  <p class="card-category"></p>
+                  <p class="card-category">Formulario con informaición del usuario</p>
                 </div>
                 <div class=" mt-4 card-body">
                   <form>
@@ -48,7 +48,7 @@ include ("../../Modelo/Conexion_BD.php");
                     <div class="clearfix"></div>
                   </form>
                   <a href="indexUpdate.php">
-                        <button class="btn btn-primary pull-right">Actualizar Información</button>
+                        <button class="btn btn-primary pull-right">Editar Información</button>
                     </a>
                 </div>
               </div>

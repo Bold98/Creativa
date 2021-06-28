@@ -10,7 +10,7 @@ include_once 'dcHeader.php';?>
               <div class="card">
                 <div class="card-header card-header-primary">
                     <h4 class="card-title">Editar perfil</h4>
-                    <p class="card-category">Formulario con informaición del usuario</p>
+                    <p class="card-category">A continuación puedes cambiar la información de los campos</p>
                 </div>
                 <div class=" mt-4 card-body">
                   <form method="POST" enctype="multipart/form-data">
@@ -42,7 +42,7 @@ include_once 'dcHeader.php';?>
                         </div>
                       </div>
                     </div>
-                        <input type="submit" value="Editar" class="btn btn-primary pull-right" name="editarBtn">
+                        <input type="submit" value="Actualizar" class="btn btn-success pull-right" name="editarBtn">
                         <?php
                             include("../../Controlador/C_update_usuario.php");
                         ?>
