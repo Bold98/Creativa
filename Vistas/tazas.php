@@ -15,7 +15,7 @@ include_once 'header.php';
             <div class="frame">
                 <h6>Añade el producto a tu carrito o contactanos para un producto personalizado</h6>
                 <a href="#"><button class=" m-2 custom-btn btn-5"><i class="bi bi-cart"></i> Comprar</button></a>
-                <a href="#"><button class=" m-2 custom-btn btn-5"><i class="bi bi-person-lines-fill"></i></i> Contacto</button></a>
+                <a href="contacto.php"><button class=" m-2 custom-btn btn-5"><i class="bi bi-person-lines-fill"></i></i> Contacto</button></a>
             </div>
         </div>
         <div class="col-md-5">
