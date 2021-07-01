@@ -85,6 +85,14 @@
                 <a class="nav-link" href="Vistas/dashboard/index.php">Panel de control</a>
               </li>
               <?php }?>
+              <?php
+                if(isset($_SESSION['userName']) && $verifyAdmin!="creativa.detallesp@gmail.com"){?>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Vistas/dashboardCliente/index.php">Panel de control</a>
+                  </li>
+                <?php
+                }
+              ?>
               <?php if(isset($_SESSION['userName'])){ ?>
               <li class="nav-item">
                 <a class="nav-link" href="Controlador/C_logout.php">Salir</a>
@@ -132,7 +140,7 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contactanos</a>
+                  <a class="nav-link" href="Vistas/contacto.php">Contactanos</a>
                 </li>
               </ul>
               <form class="d-flex">

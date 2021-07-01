@@ -35,7 +35,7 @@ if(!isset($_SESSION))
   </head>
   <body class="">
     <div class="wrapper ">
-      <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+      <div class="sidebar" data-color="azure" data-background-color="black" data-image="../assets/img/sidebar-1.jpg">
         <!--
           Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -48,31 +48,19 @@ if(!isset($_SESSION))
           <ul class="nav">
             <li class="nav-item active  ">
               <a class="nav-link" href="index.php">
-              <i class="bi bi-kanban"></i>
+              <i class="bi bi-person"></i>
                 <p>Inicio</p>
               </a>
             </li>
             <li class="nav-item active  ">
-              <a class="nav-link" href="productos.php">
-              <i class="bi bi-basket"></i>
-                <p>Productos</p>
+              <a class="nav-link" href="Pedidos.php">
+              <i class="bi bi-receipt"></i>
+                <p>Pedidos</p>
               </a>
             </li>
-            <li class="nav-item ">
-              <a class="nav-link" href="#">
-              <i class="bi bi-person"></i>
-                <p>Usuarios</p>
-              </a>
-            </li>
-            <li class="nav-item active ">
-              <a class="nav-link" href="pedidosTemporada.php">
-              <i class="bi bi-mailbox2"></i>
-                <p>Pedidos de temporada</p>
-              </a>
-            </li>
-            <li class="nav-item active ">
-              <a class="nav-link" href="PedidosContacto.php">
-              <i class="bi bi-mailbox"></i>
+            <li class="nav-item active  ">
+              <a class="nav-link" href="pedidosp.php">
+              <i class="bi bi-receipt"></i>
                 <p>Pedidos personalizados</p>
               </a>
             </li>
